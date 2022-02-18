@@ -1,12 +1,20 @@
-import React from "react";
+import { Grid } from "@mui/material";
+
 import Page from "../components/Page";
-import { Jumbotron, BookPostCards, Footer } from "../components/Home";
+import { Jumbotron, BookCard, Footer } from "../components/Home";
+
+import BOOKS from "../_mocks/books";
 
 export default function Home() {
 	return (
 		<Page title="Book Club">
 			<Jumbotron />
-			<BookPostCards />
+
+			<Grid container spacing={2}>
+				{BOOKS.map((book, index) => (
+					<BookCard book={book} key={index} index={index} />
+				))}
+			</Grid>
 			<Footer />
 		</Page>
 	);

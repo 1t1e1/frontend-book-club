@@ -1,9 +1,18 @@
+import { useMemo } from "react";
 import { CssBaseline } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-const theme = createTheme();
+import typography from "./typography";
 
-export default function index({ children }) {
+export default function ThemeConfig({ children }) {
+	const themeOptions = useMemo(
+		() => ({
+			typography,
+		}),
+		[]
+	);
+	const theme = createTheme(themeOptions);
+
 	return (
 		<ThemeProvider theme={theme}>
 			<CssBaseline />

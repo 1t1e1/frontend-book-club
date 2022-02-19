@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 
 import Page from "../components/Page";
 import { Jumbotron, BookCard, Footer } from "../components/Home";
@@ -10,11 +10,13 @@ export default function Home() {
 		<Page title="Book Club">
 			<Jumbotron />
 
-			<Grid container spacing={2}>
-				{BOOKS.map((book, index) => (
-					<BookCard book={book} key={index} index={index} />
-				))}
-			</Grid>
+			<Container maxWidth="lg">
+				<Grid container spacing={6}>
+					{BOOKS.map((book, index) => (
+						<BookCard book={book} key={index} index={index} />
+					))}
+				</Grid>
+			</Container>
 			<Footer />
 		</Page>
 	);

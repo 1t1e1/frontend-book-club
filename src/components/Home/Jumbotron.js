@@ -1,5 +1,5 @@
 import { Card } from "@mui/material";
-import styled from "@emotion/styled";
+import { styled } from "@mui/system";
 
 const CoverStyle = styled("img")(({ theme }) => ({
 	width: "100%",

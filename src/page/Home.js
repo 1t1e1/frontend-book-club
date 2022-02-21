@@ -17,7 +17,8 @@ export default function Home() {
 					))}
 				</Grid>
 			</Container>
-			<Footer />
+
+			<Footer index={BOOKS.length} />
 		</Page>
 	);
 }

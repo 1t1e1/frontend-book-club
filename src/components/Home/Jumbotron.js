@@ -17,9 +17,8 @@ const CardMediaStyle = styled("div")(({ theme }) => ({
 		position: "absolute",
 		top: 0,
 		left: 0,
-		border: "2px solid red",
 		backgroundColor: "black",
-		opacity: 0.6,
+		opacity: 0.7,
 	},
 }));
 
@@ -33,7 +32,10 @@ export default function Jumbotron() {
 			}}
 		>
 			<CardMediaStyle>
-				<CoverStyle src={"/static/images/homepageCover.jpg"}></CoverStyle>
+				<CoverStyle
+					src={"/static/images/homepageCover.jpg"}
+					id="back-to-top-anchor"
+				></CoverStyle>
 			</CardMediaStyle>
 		</Card>
 	);

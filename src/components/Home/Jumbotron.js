@@ -1,5 +1,7 @@
-import { Card } from "@mui/material";
+import { Card, Box, CardContent, Typography, Container } from "@mui/material";
 import { styled } from "@mui/system";
+
+import CountDown from "./CountDown";
 
 const CoverStyle = styled("img")(({ theme }) => ({
 	width: "100%",
@@ -37,6 +39,64 @@ export default function Jumbotron() {
 					id="back-to-top-anchor"
 				></CoverStyle>
 			</CardMediaStyle>
+
+			<CardContent
+				sx={{
+					zIndex: 19,
+					top: "10%",
+					position: "absolute",
+					p: 0,
+					// border: "2px solid white",
+					// marginLeft: "3em",
+					width: "100%",
+				}}
+			>
+				<Container maxWidth="lg">
+					<Box
+						sx={{
+							display: "flex",
+							justifyContent: "flex-end",
+						}}
+					>
+						<CountDown></CountDown>
+					</Box>
+
+					<Box
+						sx={{
+							display: "flex",
+							flexDirection: "column",
+						}}
+					>
+						<Typography
+							variant="h1"
+							sx={{
+								// textAlign: "end",
+								color: "#fff",
+							}}
+						>
+							Join
+						</Typography>
+						<Typography
+							variant="h1"
+							sx={{
+								// textAlign: "end",
+								color: "#fff",
+							}}
+						>
+							FrontEnd
+						</Typography>
+						<Typography
+							variant="h1"
+							sx={{
+								// textAlign: "end",
+								color: "#fff",
+							}}
+						>
+							Book Club
+						</Typography>
+					</Box>
+				</Container>
+			</CardContent>
 		</Card>
 	);
 }

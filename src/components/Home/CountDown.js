@@ -1,4 +1,5 @@
-import { Box, Divider, Typography } from "@mui/material";
+import Countdown from "react-countdown";
+import { Box, Typography } from "@mui/material";
 
 function CountDownPart({ text, count }) {
 	return (
@@ -31,17 +32,39 @@ function CountDownPart({ text, count }) {
 	);
 }
 
-export default function CountDown() {
-	return (
-		<Box
-			sx={{
-				display: "flex",
-				// flexDirection: "column",
-			}}
-		>
-			<CountDownPart text="DAYS" count="03" />
-			<CountDownPart text="HOURS" count="13" />
-			<CountDownPart text="MINUTES" count="13" />
-		</Box>
-	);
-}
+const Completionist = () => (
+	<Typography
+		variant="h4"
+		sx={{
+			textAlign: "center",
+			color: "#fff",
+		}}
+	>
+		You are good to go!
+	</Typography>
+);
+
+const renderer = ({ days, hours, minutes, seconds, completed }) => {
+	if (completed) {
+		return <Completionist />;
+	} else {
+		return (
+			<Box
+				sx={{
+					display: "flex",
+				}}
+			>
+				<CountDownPart text="DAYS" count={days} />
+				<CountDownPart text="HOURS" count={hours} />
+				<CountDownPart text="MINUTES" count={minutes} />
+				<CountDownPart text="SECONDS" count={seconds} />
+			</Box>
+		);
+	}
+};
+
+const CountdownComponent = ({ date = Date.now() + 500000001 }) => (
+	<Countdown date={date} renderer={renderer} />
+);
+
+export default CountdownComponent;

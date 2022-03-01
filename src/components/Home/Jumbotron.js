@@ -71,7 +71,9 @@ export default function Jumbotron() {
 							variant="h1"
 							sx={{
 								// textAlign: "end",
-								color: "#fff",
+								color: "#000",
+								textShadow:
+									"-1px -1px 0 #fff,  1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff",
 							}}
 						>
 							Join

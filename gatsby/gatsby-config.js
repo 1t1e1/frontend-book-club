@@ -1,12 +1,19 @@
 module.exports = {
-  plugins: [
-    'gatsby-plugin-top-layout',
-    'gatsby-plugin-react-helmet',
-    // If you want to use styled components you should add the plugin here.
-    // 'gatsby-plugin-styled-components',
-    'gatsby-plugin-mui-emotion',
-  ],
-  siteMetadata: {
-    title: 'My page',
-  },
+	plugins: [
+		"gatsby-plugin-top-layout",
+		"gatsby-plugin-react-helmet",
+		"gatsby-plugin-mui-emotion",
+		// mui plugins
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `book`,
+				path: `${__dirname}/src/pages/`,
+			},
+		},
+		`gatsby-plugin-mdx`,
+	],
+	siteMetadata: {
+		title: "My page",
+	},
 };

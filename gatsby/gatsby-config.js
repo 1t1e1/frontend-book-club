@@ -8,7 +8,7 @@ module.exports = {
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: `book`,
-				path: `${__dirname}/src/pages/`,
+				path: `${__dirname}/content/book/`,
 			},
 		},
 		`gatsby-plugin-mdx`,

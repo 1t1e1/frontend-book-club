@@ -1,0 +1,168 @@
+---
+
+title: "Learning React"
+author: "Eve Porcello & Alex Banks"
+cover: "static/images/books/learning_react.jpg"
+description: "description for learn react"
+
+---
+
+## Jan 5th 7pm
+## Chapter 2 "Javascript for React" Part I 
+
+Q1. What is the difference between function declaration and function expression?
+Q2. What does destructuring an object mean? How does it work when passing an object as a function argument? And how can you destructure an object nested in another object?
+Q3. What is object literal enhancement?
+Q4. What can you use the spread operator for?
+BONUS 1: Why can you omit "return" in arrow functions?
+BONUS 2: How regular function declarations and arrow functions treat the scope (this) differently?
+
+## Jan 12th 7pm
+## Chapter 2 "Javascript for React" Part II 
+
+Q1. What is the difference between promises and async/await?
+Q2. Why do we need to include the word “default” when exporting JS modules?
+Q3. How does a module with a single and multiple exports differ when being imported in another module?
+Q4. What two possible locally scoped changes using the term “as” when importing a module are presented in this chapter?
+Q5. How is using modules different in ES6 vs CommonJS?BONUS (Interview Questions)
+
+B1. How do you define a class in JavaScript? How do you a public and a private variable in this class?
+B2. What is a JavaScript promise?
+
+## Chapter 3 "Functional Programming with JavaScript" Part I 
+## Jan 19th 7pm.
+Topics: What it means to be Functional, Imperative vs Declarative, Functional Concepts - Immutability, Pure Functions, Data Transformations.
+
+Q1. What does the fact of functions being variables in Javascript allow us to do with those functions?
+Q2. What is declarative programming?
+Q3. Which of the following array methods mutate the object and which don’t? “Array.push, array.concat, array.splice, array.pop, array.filter, array.map, array.reduce, array.reduceright”
+Q4. What defines a pure function? Why is a pure function easier to test?
+Q5. What are the three rules we should follow when writing functions?
+
+## Jan 26th 7pm
+## Chapter 3 "Functional Programming with JavaScript" Part II
+
+### Topics: Functional Concepts - Higher-Order Functions, Recursion, Composition, Putting it all together.
+
+Q1. What is a higher-order function?
+Q2. What is a recursive function? In what scenarios can recursive functions be a better solution than loops?
+Q3. What is function chaining?
+Q4. What is function composition?
+BONUS: What are the pros and cons of functional programming vs object-oriented programming? (Not clear in the chapter).
+
+## Chapter 4 "How React Works" 
+## Feb 2nd 7pm
+
+Q1. Why do we need to import React and ReactDOM libraries instead of importing just React?
+Q2. What does AJAX stand for and how did it change the way pages were loaded in the browser?
+Q3. What are class components? What are the lifecycle methods of class components?
+Q4. What is JSX?
+Interview Question: How React works? How Virtual-DOM works in React?
+
+## Chapter 5 - React with JSX (React Elements as JSX, Babel, Recipes as JSX, React Fragments).
+
+Using the cdns* and the script type=“text/babel”, recreate the Delicious Recipes code using another fake - or real - dataset (array) and share your code with the group. i.e. School Names, Addresses and Programs; Cars names, prices and available colours; etc.
+
+We’ll notice that the process of looping through data - or consuming data from an API - and rendering UI is basically the same despite of the industry of the app (Food, Cars, Educational, Hotels, BnB, Movies, etc).
+
+## Feb 16th 7pm
+## Chapter 5 - Part II - React with JSX (Intro to webpack, Creating the Project, Source Mapping, Create React App)
+
+Q1. What tools do you use for code compilation? I.E. Webpack, parcel, babel.
+Q2. Aside from code compilation, what else can webpack - or other bundlers - handle?
+Q3. What benefits do we developers gain by using a tool like webpack?
+Q4. What is the benefit of splitting code in multiple files or modules?
+Q5. What is the benefit of adding “source-map” to the webpack configuration?
+
+## Feb 23rd 7pm
+## Chapter 6 - Part I - React State Management (Building a Star Rating Component, The useState Hook, Refactoring for Advanced Reusability, State in Component Trees
+
+Q1. What are React Hooks?
+Q2. What is the useState hook used for and how does it work? And how does useState make it easier to manage state in functional components compared to class components?
+Q3. Why is it not a best practice to store state in components?
+Q4. What is a pure component?
+Q5. How can we pass data up the component tree?
+
+## March 2nd 7pm
+## Chapter 6 - Part II - React State Management (Building Forms, React Context)
+
+Q1. What is a ref?
+Q2. Why is using controlled components a better approach compared to using refs when building forms?
+Q3. What’s the benefit of using React Context instead of passing data down the component tree using props?
+Q4. Why is it a best practice to add functions to context for the operations that can change the state?
+Q5. Why it may be better to use custom hooks instead of exposing context to consumer components?
+
+## March 9th
+## Chapter 7 - Part I - Enhancing Components with Hooks (Introducing useEffect - The Dependency Array, Deep Checking Dependencies, When to useLayoutEffect)
+
+Q1. What is useEffect used for?
+Q2. When should we add a dependency array as a parameter to some hooks? What happens when you add an empty array as dependency to useEffect?
+Q3. What happens when you return a function from useEffect?
+Q4. What does the hook useMemo do?
+Q5. What is the difference between useEffect and useLayoutEffect? And in which cases would useLayoutEffect be recommended?
+
+## March 16th
+## Chapter 7 - Part II - Enhancing Components with Hooks (Introducing useEffect - Rules to Follow with Hooks, Improving Code with useReducer, useReducer to Handle Complex State, Improving Component Performance, shouldComponentUpdate and PureComponent, When to Refactor)
+
+Q1. What rules should we follow when using hooks?
+Q2. What is a reducer?
+Q3. How can you guarantee you keep the original object in the state and just overwrite the intended key/value of the object when setting the state?
+Q4. What does the memo function do? How does the memo function help to improve the app performance?
+Q5. How can useCallback or useMemo help to improve the app performance?
+
+## 
+## Chapter 8 - Part I - Incorporating Data - Requesting Data, Render Props, Virtualized Lists (Creating a Fetch Hook, Creating a Fetch Component, Handling Multiple Requests, Memoizing Values).
+
+Q1. What are some use cases for storing data in sessionStorage or localStorage?
+Q2. What are Render Props?
+Q3. What does windowing (or virtualization) mean? What solutions are available in React for virtualized lists?
+Q4. Why did the authors decide to use useCallback and useMemo for the values of item, prev and next in the useIterator custom hook?
+
+## Chapter 8 - Part II - Incorporating Data - Waterfall Requests, Throttling the Network Speed, Parallel Requests, Waiting for Values, Canceling Requests, Introduction to GraphQL
+
+Q1. What is the difference between waterfall and parallel requests?
+Q2. Why is it recommended to slow down your network speed when developing an application?
+Q3. How can you prevent a component from being rendered until the data it requires is provided?
+Q4. What are your thoughts on GraphQL?
+
+
+## Chapter 9 - Suspense
+Q1. What are error boundaries and why they are important?
+Q2. Why should you split your App code in smaller chunks?
+Q3. What does the Suspense component do? How is it used to handle lazy loading components?
+
+## April 13th 7pm PDT
+## Chapter 10 - React Testing
+## Part I (ESLint, Prettier, Typechecking for React Applications)
+
+Q1. What is linting? What does ESLint do?
+Q2. What are some examples of ESlint plugins and how do they help us improve the code quality?
+Q3. What is Prettier? Why should you use a code formatter?
+Q4. How do ESLint and Prettier work together?
+Q5. Do you use typechecking in React? How do you currently handle it?
+
+## April 20th 7pm PDT
+## Chapter 10 - React Testing
+## Part II (Test-Driven Development, Incorporating Jest, Testing React Components)
+
+Q1. What steps should you follow in order to practice TDD?
+Q2. What are the jest methods .toBe(), .toEqual(), and .describe() used for?
+Q3. What is the purpose of jsdom in testing React components with jest?
+Q4. What it can be a good idea to add a data-testid attribute to the html elements you want to test?
+Q5. What is code coverage and Istanbul? How much coverage is considered good for unit tests in a project?
+
+
+## April 27th 7pm PDT
+## Chapter 11 - React Router
+
+Q1. What is routing?
+Q2. How can you nest routes using React Router?
+Q3. What do the hooks useRoutes, useParams and useNavigate do?
+
+## Chapter 12 - React and the Server 
+##  May 4th 7pm PDT
+
+Q1. What is the difference between isomorphism and universalism?
+Q2. What are the differences between Client Side Rendering, Server Side Rendering, Rehydration and Prerendering?
+Q3. When should you use CRA, Gatsby or Next.js?
+Q4. Any final thoughts?

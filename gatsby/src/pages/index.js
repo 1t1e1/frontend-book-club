@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { graphql } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
@@ -15,6 +16,10 @@ import Copyright from "../components/Copyright";
 export default function Index({ data }) {
 	return (
 		<Container maxWidth="sm">
+			<StaticImage
+				alt="Home page cover image"
+				src="../statics/homepageCover.jpg"
+			/>
 			<Box sx={{ my: 4 }}>
 				<Box sx={{ my: 4 }}>
 					<Typography variant="h4" component="h1" gutterBottom>
@@ -47,7 +52,6 @@ export const query = graphql`
 					frontmatter {
 						title
 						author
-						cover
 					}
 				}
 			}

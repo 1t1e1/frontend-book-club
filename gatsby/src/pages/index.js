@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
@@ -26,13 +26,18 @@ export default function Index({ data }) {
 						Book List
 					</Typography>
 					<List>
-						{data.allMdx.edges.map(({ node }, index) => (
-							<ListItem key={index}>
-								<Link to={`/book/${node.slug}`} color="secondary">
-									{node.frontmatter.title}
-								</Link>
-							</ListItem>
-						))}
+						{data.allMdx.edges.map(({ node }, index) => {
+							const image = getImage(node.frontmatter.cover?.childImageSharp);
+
+							return (
+								<ListItem key={index}>
+									<Link to={`/book/${node.slug}`} color="secondary">
+										{node.frontmatter.title}
+									</Link>
+									<GatsbyImage image={image} maxWidth="100px" />
+								</ListItem>
+							);
+						})}
 					</List>
 					<ProTip />
 					<Copyright />
@@ -52,6 +57,11 @@ export const query = graphql`
 					frontmatter {
 						title
 						author
+						cover {
+							childImageSharp {
+								gatsbyImageData(height: 100)
+							}
+						}
 					}
 				}
 			}

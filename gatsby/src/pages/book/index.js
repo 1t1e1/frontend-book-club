@@ -2,9 +2,7 @@ import * as React from "react";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import ProTip from "../../components/ProTip";
 import Link from "../../components/Link";
-import Copyright from "../../components/Copyright";
 
 export default function Book() {
 	return (
@@ -14,8 +12,6 @@ export default function Book() {
 					Make re-direction to current, last book or homepage.
 				</Typography>
 				<Link to="/">Go to the main page</Link>
-				<ProTip />
-				<Copyright />
 			</Box>
 		</Container>
 	);

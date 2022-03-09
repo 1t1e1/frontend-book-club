@@ -5,7 +5,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
 export const query = graphql`
-	query ($slug: String = "") {
+	query ($slug: String) {
 		mdx(slug: { eq: $slug }) {
 			body
 			mdxAST
@@ -16,15 +16,7 @@ export const query = graphql`
 				cover {
 					absolutePath
 					childImageSharp {
-						fluid {
-							base64
-							tracedSVG
-							srcWebp
-							srcSetWebp
-							originalImg
-							originalName
-						}
-						gatsbyImageData
+						gatsbyImageData(height: 390)
 					}
 				}
 			}
@@ -32,13 +24,7 @@ export const query = graphql`
 	}
 `;
 
-// img fix  fluid ..
 export default function BookDetail({ data }) {
-	console.log(
-		"data from book id",
-
-		data.mdx.frontmatter.cover.childImageSharp.gatsbyImageData
-	);
 	return (
 		<div>
 			Book detail page

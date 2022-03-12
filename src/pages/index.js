@@ -40,6 +40,7 @@ export const query = graphql`
 					slug
 					frontmatter {
 						title
+						subtitle
 						author
 						description
 						cover {

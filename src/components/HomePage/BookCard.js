@@ -14,7 +14,7 @@ const CoverStyle = styled("img")(({ theme }) => ({
 }));
 
 export default function BookCard({ book, image, index }) {
-	const { author, description, title } = book.frontmatter;
+	const { author, description, title, subtitle } = book.frontmatter;
 
 	return (
 		<Grid item xs={12}>
@@ -101,7 +101,7 @@ export default function BookCard({ book, image, index }) {
 							}}
 						>
 							<Typography
-								variant="h2"
+								variant="h3"
 								sx={{
 									textAlign: "center",
 								}}
@@ -112,7 +112,16 @@ export default function BookCard({ book, image, index }) {
 							</Typography>
 
 							<Typography
-								variant="h3"
+								variant="h5"
+								sx={{
+									textAlign: "center",
+								}}
+							>
+								{subtitle}
+							</Typography>
+
+							<Typography
+								variant="h4"
 								sx={{
 									textAlign: "center",
 								}}

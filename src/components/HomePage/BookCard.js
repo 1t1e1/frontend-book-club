@@ -85,7 +85,11 @@ export default function BookCard({ book, image, index }) {
 							}}
 							src={cover}
 						/> */}
-						<GatsbyImage image={image} maxWidth="100px" />
+						<GatsbyImage
+							alt={`image of ${title}`}
+							image={image}
+							maxWidth="100px"
+						/>
 					</Grid>
 					<Grid item xs={8} md={6} sx={{}}>
 						<Box

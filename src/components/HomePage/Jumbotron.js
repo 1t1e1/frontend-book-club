@@ -9,7 +9,7 @@ export default function Jumbotron() {
 		<Box>
 			<StaticImage
 				alt="Home page cover image"
-				src="../statics/homepageCover.jpg"
+				src="../../statics/homepageCover.jpg"
 				style={{
 					height: "24em",
 					position: "absolute",

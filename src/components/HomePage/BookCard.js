@@ -61,7 +61,7 @@ export default function BookCard({ book, image, index }) {
 						xs={8}
 						md={3}
 						sx={{
-							height: "350px",
+							height: "300px",
 							position: "relative",
 							"&>div": {
 								zIndex: "9",
@@ -74,7 +74,7 @@ export default function BookCard({ book, image, index }) {
 						<GatsbyImage alt={`image of ${title}`} image={image} />
 					</Grid>
 
-					<Grid item xs={8} md={6} sx={{}}>
+					<Grid item xs={11} md={6}>
 						<Box
 							sx={{
 								display: "flex",
@@ -87,6 +87,7 @@ export default function BookCard({ book, image, index }) {
 								variant="h3"
 								sx={{
 									textAlign: "center",
+									m: 2,
 								}}
 							>
 								<Link to={`/book/${book.slug}`} color="secondary">
@@ -107,6 +108,7 @@ export default function BookCard({ book, image, index }) {
 								variant="h4"
 								sx={{
 									textAlign: "center",
+									m: 2,
 								}}
 							>
 								{author}
@@ -115,7 +117,6 @@ export default function BookCard({ book, image, index }) {
 								variant="body1"
 								sx={{
 									mx: "auto",
-									mt: 1,
 									mb: 5,
 									textAlign: "center",
 									maxWidth: "80%",

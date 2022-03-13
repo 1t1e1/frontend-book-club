@@ -22,7 +22,6 @@ export default function Jumbotron() {
 			<Box
 				sx={{
 					clipPath: "polygon(0% 0%, 100% 0, 100%  calc(100% - 30px), 0% 100%)",
-					zIndex: 9,
 					width: "100%",
 					height: "24em",
 					backgroundColor: "black",
@@ -33,7 +32,7 @@ export default function Jumbotron() {
 			<Container
 				maxWidth="lg"
 				sx={{
-					zIndex: 19,
+					zIndex: 1,
 					position: "relative",
 					height: "24em",
 					mb: 4,

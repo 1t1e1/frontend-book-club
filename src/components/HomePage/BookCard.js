@@ -2,16 +2,8 @@ import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 import { Grid, Box, Card, Typography } from "@mui/material";
-import { styled } from "@mui/system";
 
 import Link from "../Link";
-
-const CoverStyle = styled("img")(({ theme }) => ({
-	top: "-60px",
-	position: "absolute",
-	height: "390px",
-	boxShadow: theme.shadows[13],
-}));
 
 export default function BookCard({ book, image, index }) {
 	const { author, description, title, subtitle } = book.frontmatter;
@@ -71,26 +63,17 @@ export default function BookCard({ book, image, index }) {
 						sx={{
 							height: "350px",
 							position: "relative",
+							"&>div": {
+								zIndex: "9",
+								top: "-60px",
+								position: "absolute",
+								boxShadow: 13,
+							},
 						}}
 					>
-						{/* <CoverStyle
-							sx={{
-								...(index % 2
-									? {
-											left: "0em",
-									  }
-									: {
-											right: "0em",
-									  }),
-							}}
-							src={cover}
-						/> */}
-						<GatsbyImage
-							alt={`image of ${title}`}
-							image={image}
-							maxWidth="100px"
-						/>
+						<GatsbyImage alt={`image of ${title}`} image={image} />
 					</Grid>
+
 					<Grid item xs={8} md={6} sx={{}}>
 						<Box
 							sx={{

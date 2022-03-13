@@ -33,7 +33,7 @@ export default function Index({ data }) {
 
 export const query = graphql`
 	query GetBookList {
-		allMdx {
+		allMdx(sort: { order: DESC, fields: frontmatter___date }) {
 			edges {
 				node {
 					id

@@ -53,7 +53,7 @@ export default function BookCard({ book, image, index }) {
 					spacing={1}
 					sx={{
 						justifyContent: "space-evenly",
-						flexDirection: index % 2 ? "row" : "row-reverse",
+						flexDirection: index % 2 ? "row-reverse" : "row",
 					}}
 				>
 					<Grid

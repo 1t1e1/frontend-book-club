@@ -10,6 +10,7 @@ export default function Jumbotron() {
 	return (
 		<Box>
 			<StaticImage
+				id="ref-for-scrolling-back"
 				alt="Home page cover image"
 				src="../../statics/homepageCover.jpg"
 				style={{
@@ -40,6 +41,25 @@ export default function Jumbotron() {
 					mb: 4,
 				}}
 			>
+				<Box
+					sx={{
+						display: "flex",
+						justifyContent: "end",
+					}}
+				>
+					<Typography
+						// variant="h3"
+						component="h1"
+						sx={{
+							m: 2,
+							width: "100px",
+							WebkitTextStrokeWidth: "1px",
+							WebkitTextStrokeColor: "#fff",
+						}}
+					>
+						there will be CountDown
+					</Typography>
+				</Box>
 				<Box
 					sx={{
 						display: "flex",

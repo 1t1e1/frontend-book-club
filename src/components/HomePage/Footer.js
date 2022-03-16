@@ -6,7 +6,7 @@ import { styled } from "@mui/system";
 function ScrollTop({ children, ...props }) {
 	const handleClick = (event) => {
 		const anchor = (event.target.ownerDocument || document).querySelector(
-			"#back-to-top-anchor"
+			"#ref-for-scrolling-back"
 		);
 
 		if (anchor) {

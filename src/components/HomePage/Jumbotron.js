@@ -1,8 +1,10 @@
 import React from "react";
 
 import { StaticImage } from "gatsby-plugin-image";
-import { Box, Typography } from "@mui/material";
-import Container from "@mui/material/Container";
+
+import { Box, Typography, Container } from "@mui/material";
+
+import Link from "../Link";
 
 export default function Jumbotron() {
 	return (
@@ -38,34 +40,68 @@ export default function Jumbotron() {
 					mb: 4,
 				}}
 			>
-				<Typography
-					variant="h2"
-					component="h1"
+				<Box
 					sx={{
-						WebkitTextStrokeWidth: "1px",
-						WebkitTextStrokeColor: "#fff",
+						display: "flex",
+						justifyContent: "center",
 					}}
 				>
-					Join
-				</Typography>
-				<Typography
-					variant="h2"
-					component="h1"
-					sx={{
-						color: "#fff",
-					}}
-				>
-					FrontEnd
-				</Typography>
-				<Typography
-					variant="h2"
-					component="h1"
-					sx={{
-						color: "#fff",
-					}}
-				>
-					Book Club
-				</Typography>
+					<Link
+						to="https://join.slack.com/t/frontendbookclub/shared_invite/zt-ev3ml2vp-ss4go7hQ9B7N4cb5caLFLQ"
+						color="inherit"
+						underline="none"
+						variant="subtitle1"
+						sx={{
+							WebkitTextStrokeWidth: "1px",
+							WebkitTextStrokeColor: "#fff",
+						}}
+					>
+						SLACK
+					</Link>
+					<Link
+						to="https://us04web.zoom.us/j/3299336592?pwd=V1pqNk5EWUFqTkFtN2JzWk1DMjZVZz09"
+						color="inherit"
+						underline="none"
+						variant="subtitle1"
+						sx={{
+							WebkitTextStrokeWidth: "1px",
+							WebkitTextStrokeColor: "#fff",
+							ml: 4,
+						}}
+					>
+						ZOOM
+					</Link>
+				</Box>
+				<Box>
+					<Typography
+						variant="h2"
+						component="h1"
+						sx={{
+							WebkitTextStrokeWidth: "1px",
+							WebkitTextStrokeColor: "#fff",
+						}}
+					>
+						Join
+					</Typography>
+					<Typography
+						variant="h2"
+						component="h1"
+						sx={{
+							color: "#fff",
+						}}
+					>
+						FrontEnd
+					</Typography>
+					<Typography
+						variant="h2"
+						component="h1"
+						sx={{
+							color: "#fff",
+						}}
+					>
+						Book Club
+					</Typography>
+				</Box>
 			</Container>
 		</Box>
 	);

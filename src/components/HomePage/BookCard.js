@@ -90,7 +90,7 @@ export default function BookCard({ book, image, index }) {
 									m: 2,
 								}}
 							>
-								<Link to={`/book/${book.slug}`} color="secondary">
+								<Link to={`/book/${book.slug}`} color="inherit">
 									{title}
 								</Link>
 							</Typography>

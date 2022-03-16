@@ -4,7 +4,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Accordion from "@mui/material/Accordion";
 
-function MyAccordion({ title, children }) {
+function CustomAccordion({ title, children }) {
 	return (
 		<Accordion>
 			<AccordionSummary>{title}</AccordionSummary>
@@ -14,7 +14,7 @@ function MyAccordion({ title, children }) {
 }
 
 const components = {
-	MyAccordion: MyAccordion,
+	CustomAccordion: CustomAccordion,
 };
 
 export default components;

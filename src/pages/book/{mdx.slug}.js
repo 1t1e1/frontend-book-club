@@ -6,7 +6,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
 
-import { Grid, Box, Card, Typography } from "@mui/material";
+import { Grid, Box } from "@mui/material";
 
 import components from "../../components/Book/MdxComponent";
 
@@ -23,18 +23,26 @@ export default function BookDetail({ data }) {
 		>
 			<Grid container spacing={3} justifyContent="space-evenly">
 				<Grid item sm={3} md={3}>
-					<Box sx={{ pt: 5 }}>
+					<Box sx={{ mt: 5 }}>
 						<GatsbyImage alt={`image of `} image={image} />
 					</Box>
 				</Grid>
 				<Grid item sm={9} md={8}>
 					<h1>{title}</h1>
-					<h2>{subtitle}</h2>
-					<h5>{author}</h5>
+					<h5>{subtitle}</h5>
+					<h3>{author}</h3>
 					<p>{description}</p>
 				</Grid>
 			</Grid>
-			<Grid item sm={12}>
+
+			<Grid
+				item
+				sm={12}
+				sx={{
+					mt: 3,
+					mx: { xs: 0, sm: 3, md: 6 },
+				}}
+			>
 				<MDXProvider components={components}>
 					<MDXRenderer>{data.mdx.body}</MDXRenderer>
 				</MDXProvider>

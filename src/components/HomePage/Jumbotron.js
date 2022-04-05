@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -7,6 +7,23 @@ import { Box, Typography, Container } from "@mui/material";
 import Link from "../Link";
 
 export default function Jumbotron() {
+	const [scroll, setScroll] = useState(0);
+
+	const listenScrollEvent = (event) => {
+		const scrollY = window.scrollY;
+
+		if (scrollY < 300) {
+			return setScroll(scrollY / 300);
+		} else if (window.scrollY > 300) {
+			return setScroll(1);
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener("scroll", listenScrollEvent);
+		return () => window.removeEventListener("scroll", listenScrollEvent);
+	}, []);
+
 	return (
 		<Box>
 			<StaticImage
@@ -100,6 +117,10 @@ export default function Jumbotron() {
 							WebkitTextStrokeWidth: "1px",
 							WebkitTextStrokeColor: "#fff",
 						}}
+						style={{
+							transition: "1.1s cubic-bezier(0, 0, 0.27, 0.88)",
+							transform: `translateX(calc(1.7em - 3em*${scroll}))`,
+						}}
 					>
 						Join
 					</Typography>
@@ -109,6 +130,10 @@ export default function Jumbotron() {
 						sx={{
 							color: "#fff",
 						}}
+						style={{
+							transition: "1.5s cubic-bezier(0, 0, 0.27, 0.88)",
+							transform: `translateX(calc(1.2em + 2em*${scroll}))`,
+						}}
 					>
 						FrontEnd
 					</Typography>
@@ -117,6 +142,10 @@ export default function Jumbotron() {
 						component="h1"
 						sx={{
 							color: "#fff",
+						}}
+						style={{
+							transition: "2s cubic-bezier(0, 0, 0.27, 0.88)",
+							transform: `translateX(calc(0.5em - 2em*${scroll}))`,
 						}}
 					>
 						Book Club

@@ -13,7 +13,6 @@ export default function Index({ data }) {
 	return (
 		<Layout>
 			<Jumbotron />
-
 			<Container maxWidth="lg">
 				<Grid container spacing={6}>
 					{data.allMdx.edges.map(({ node }, index) => {
@@ -25,7 +24,6 @@ export default function Index({ data }) {
 					})}
 				</Grid>
 			</Container>
-
 			<Footer />
 		</Layout>
 	);

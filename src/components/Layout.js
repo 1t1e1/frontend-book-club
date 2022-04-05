@@ -6,7 +6,12 @@ import { Box } from "@mui/material";
 
 export default function Layout({ title = "", children, ...other }) {
 	return (
-		<Box {...other}>
+		<Box
+			sx={{
+				overflow: "hidden",
+			}}
+			{...other}
+		>
 			{/* <SEO title="File list" />
       - [ ] Make helmet with title prop etc */}
 			{children}

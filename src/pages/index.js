@@ -13,15 +13,8 @@ export default function Index({ data }) {
 	return (
 		<Layout>
 			<Jumbotron />
-
 			<Container maxWidth="lg">
-				<Grid
-					container
-					spacing={6}
-					sx={{
-						overflow: "hidden",
-					}}
-				>
+				<Grid container spacing={6}>
 					{data.allMdx.edges.map(({ node }, index) => {
 						const image = getImage(node.frontmatter.cover?.childImageSharp);
 
@@ -31,7 +24,6 @@ export default function Index({ data }) {
 					})}
 				</Grid>
 			</Container>
-
 			<Footer />
 		</Layout>
 	);

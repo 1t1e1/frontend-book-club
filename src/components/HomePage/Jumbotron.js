@@ -119,7 +119,7 @@ export default function Jumbotron() {
 						}}
 						style={{
 							transition: "1.1s cubic-bezier(0, 0, 0.27, 0.88)",
-							transform: `translateX(calc(1.7em - 3em*${scroll}))`,
+							transform: `translateX(calc(1.7em - 1em*${scroll}))`,
 						}}
 					>
 						Join
@@ -132,7 +132,7 @@ export default function Jumbotron() {
 						}}
 						style={{
 							transition: "1.5s cubic-bezier(0, 0, 0.27, 0.88)",
-							transform: `translateX(calc(1.2em + 2em*${scroll}))`,
+							transform: `translateX(calc(1.2em + .3em*${scroll}))`,
 						}}
 					>
 						FrontEnd
@@ -145,7 +145,7 @@ export default function Jumbotron() {
 						}}
 						style={{
 							transition: "2s cubic-bezier(0, 0, 0.27, 0.88)",
-							transform: `translateX(calc(0.5em - 2em*${scroll}))`,
+							transform: `translateX(calc(0.5em - .6em*${scroll}))`,
 						}}
 					>
 						Book Club

@@ -21,7 +21,7 @@ export default function BookCard({ book, image, index }) {
 				partialVisibility
 			>
 				{({ isVisible }) => (
-					<Animation isVisible={isVisible} left={index % 2}>
+					<Animation isvisible={isVisible ? 1 : 0} left={index % 2}>
 						<Card
 							elevation={0}
 							sx={{

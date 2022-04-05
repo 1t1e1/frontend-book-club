@@ -53,10 +53,10 @@ const InRight = keyframes`
   }
 `;
 
-const Container = styled("div")(({ isVisible, left }) => ({
+const Container = styled("div")(({ isvisible, left }) => ({
 	animation: left
-		? `${isVisible ? InLeft : OutLeft} 1.6s both`
-		: `${isVisible ? InRight : OutRight} 1.6s both`,
+		? `${isvisible ? InLeft : OutLeft} 1.6s both`
+		: `${isvisible ? InRight : OutRight} 1.6s both`,
 }));
 
 export default Container;

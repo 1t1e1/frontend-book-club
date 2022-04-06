@@ -1,0 +1,31 @@
+{
+	"compilerOptions": {
+		"target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+		"jsx": "react" /* Specify what JSX code is generated. */,
+		"module": "commonjs" /* Specify what module code is generated. */,
+		"esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */,
+		"forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+		"strict": true /* Enable all strict type-checking options. */,
+		"skipLibCheck": true /* Skip type checking all .d.ts files. */
+
+		// configs from the slack.
+		// "noFallthroughCasesInSwitch": true,
+		// "noImplicitAny": true,
+		// "noImplicitThis": true,
+		// "noUncheckedIndexedAccess": true,
+		// "strict": true,
+		// "module": "esnext",
+		// "moduleResolution": "node",
+		// "resolveJsonModule": true,
+		// "noEmit": true,
+		// "allowJs": true,
+		// "esModuleInterop": true,
+		// "forceConsistentCasingInFileNames": true,
+		// "isolatedModules": true,
+		// "experimentalDecorators": true,
+		// "jsx": "react-jsx",
+		// "lib": ["esnext"],
+		// "target": "es5",
+		// "skipLibCheck": true
+	}
+}
